@@ -18,6 +18,9 @@ public class Main {
             if (i % 7 == 0) {
                 toPrint += "Bang";
             }
+            if (i % 11 == 0) {
+                toPrint = "Bong";
+            }
             if (toPrint.length() == 0) {
                 toPrint = Integer.toString(i);
             }
