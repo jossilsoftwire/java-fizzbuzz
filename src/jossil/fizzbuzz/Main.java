@@ -1,10 +1,15 @@
 package jossil.fizzbuzz;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        Scanner sysReader = new Scanner(System.in);
+        System.out.println("Enter number to count up to...");
+        String countTo = sysReader.nextLine();
+        int enteredInt = Integer.parseInt(countTo);
 
-        for (int i = 1; i < 100; i++) {
+        for (int i = 1; i < enteredInt + 1; i++) {
             String toPrint = "";
             if (i % 3 == 0) {
                 if (i % 5 == 0) {
