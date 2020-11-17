@@ -38,6 +38,15 @@ public class Main {
                     toPrint += "Fezz";
                 }
             }
+            if (i % 17 == 0) {
+                if (toPrint.length() > 4) {
+                    String newToPrint = "";
+                    for (int j = toPrint.length() / 4; j > 0; j--) {
+                        newToPrint += toPrint.substring(4 * (j - 1), 4 * j);
+                    }
+                    toPrint = newToPrint;
+                }
+            }
             if (toPrint.length() == 0) {
                 toPrint = Integer.toString(i);
             }
