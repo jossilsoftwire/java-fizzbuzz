@@ -7,9 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        Rule[] activeRules = {new RuleThree(), new RuleFive(), new RuleSeven(),
-//                new RuleEleven(), new RuleThirteen(), new RuleSeventeen(), new RuleDefault()};
-
         List<Rule> activeRules = new ArrayList<Rule>();
 
         Scanner sysReader = new Scanner(System.in);
@@ -19,51 +16,68 @@ public class Main {
 
         System.out.println("Implement 3 rule...(y/n)");
         String threeRule = sysReader.nextLine();
-        if(threeRule.equals("y")){
+        if (threeRule.equals("y")) {
             activeRules.add(new RuleThree());
-        };
+        }
+        ;
 
         System.out.println("Implement 5 rule...(y/n)");
         String fiveRule = sysReader.nextLine();
-        if(fiveRule.equals("y")){
+        if (fiveRule.equals("y")) {
             activeRules.add(new RuleFive());
-        };
+        }
+        ;
 
         System.out.println("Implement 7 rule...(y/n)");
         String sevenRule = sysReader.nextLine();
-        if(sevenRule.equals("y")){
+        if (sevenRule.equals("y")) {
             activeRules.add(new RuleSeven());
-        };
+        }
+        ;
 
         System.out.println("Implement 11 rule...(y/n)");
         String elevenRule = sysReader.nextLine();
-        if(elevenRule.equals("y")){
+        if (elevenRule.equals("y")) {
             activeRules.add(new RuleEleven());
-        };
+        }
+        ;
 
         System.out.println("Implement 13 rule...(y/n)");
         String thirteenRule = sysReader.nextLine();
-        if(thirteenRule.equals("y")){
+        if (thirteenRule.equals("y")) {
             activeRules.add(new RuleThirteen());
-        };
+        }
+        ;
 
         System.out.println("Implement 17 rule...(y/n)");
         String seventeenRule = sysReader.nextLine();
-        if(seventeenRule.equals("y")){
+        if (seventeenRule.equals("y")) {
             activeRules.add(new RuleSeventeen());
-        };
+        }
+        ;
 
         activeRules.add(new RuleDefault());
 
         for (int i = 1; i < enteredInt + 1; i++) {
-            String toPrint = "";
-
-            for (Rule activeRule : activeRules) {
-                toPrint = activeRule.implementRule(toPrint, i);
-            }
-
-            System.out.println(toPrint);
+            System.out.println(getFizzBuzzStr(activeRules, i));
+//            String toPrint = "";
+//
+//            for (Rule activeRule : activeRules) {
+//                toPrint = activeRule.implementRule(toPrint, i);
+//            }
+//
+//            System.out.println(toPrint);
 
         }
+    }
+
+    public static String getFizzBuzzStr(List<Rule> activeRules, int i) {
+        String toPrint = "";
+
+        for (Rule activeRule : activeRules) {
+            toPrint = activeRule.implementRule(toPrint, i);
+        }
+
+        return toPrint;
     }
 }
