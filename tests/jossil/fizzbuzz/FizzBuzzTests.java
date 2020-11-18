@@ -1,7 +1,6 @@
-package test.java;
+package jossil.fizzbuzz;
 import java.util.List;
 import java.util.ArrayList;
-import jossil.fizzbuzz.*;
 
 public class FizzBuzzTests {
     public static void main(String[] args) {
