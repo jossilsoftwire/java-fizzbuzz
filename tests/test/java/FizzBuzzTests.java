@@ -37,7 +37,7 @@ public class FizzBuzzTests {
 
         //17
         assert (Main.getFizzBuzzStr(allRules, 17).equals("17"));
-        assert (Main.getFizzBuzzStr(allRules, 255).equals("BuzzFizz"));
+        assert (Main.getFizzBuzzStr(allRules, 255).equals("BuzzFizz")); //3*5*17
 
         System.out.println("The tests all passed!");
     }

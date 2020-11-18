@@ -19,55 +19,41 @@ public class Main {
         if (threeRule.equals("y")) {
             activeRules.add(new RuleThree());
         }
-        ;
 
         System.out.println("Implement 5 rule...(y/n)");
         String fiveRule = sysReader.nextLine();
         if (fiveRule.equals("y")) {
             activeRules.add(new RuleFive());
         }
-        ;
 
         System.out.println("Implement 7 rule...(y/n)");
         String sevenRule = sysReader.nextLine();
         if (sevenRule.equals("y")) {
             activeRules.add(new RuleSeven());
         }
-        ;
 
         System.out.println("Implement 11 rule...(y/n)");
         String elevenRule = sysReader.nextLine();
         if (elevenRule.equals("y")) {
             activeRules.add(new RuleEleven());
         }
-        ;
 
         System.out.println("Implement 13 rule...(y/n)");
         String thirteenRule = sysReader.nextLine();
         if (thirteenRule.equals("y")) {
             activeRules.add(new RuleThirteen());
         }
-        ;
 
         System.out.println("Implement 17 rule...(y/n)");
         String seventeenRule = sysReader.nextLine();
         if (seventeenRule.equals("y")) {
             activeRules.add(new RuleSeventeen());
         }
-        ;
 
         activeRules.add(new RuleDefault());
 
         for (int i = 1; i < enteredInt + 1; i++) {
             System.out.println(getFizzBuzzStr(activeRules, i));
-//            String toPrint = "";
-//
-//            for (Rule activeRule : activeRules) {
-//                toPrint = activeRule.implementRule(toPrint, i);
-//            }
-//
-//            System.out.println(toPrint);
-
         }
     }
 
